@@ -1,99 +1,32 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,sans-serif;line-height:1.6;color:#333;background:#fff;font-size:16px}
-#cta-bar{position:fixed;bottom:0;left:0;right:0;background:#1e3a8a;color:white;text-align:center;padding:18px 0;z-index:999;display:none;font-weight:bold;font-size:19px}
+#cta-bar{position:fixed;bottom:0;left:0;right:0;background:#1e3a8a;color:white;text-align:center;padding:18px;z-index:999;display:none;font-weight:bold;font-size:19px}
 #cta-bar.show{display:block}
 #cta-bar a{color:#d4af37;text-decoration:none}
 
-/* ←←← YOUR PHOTO AS FULL BACKGROUND */
 .hero{
   background:url('https://i.imgur.com/2vH5kLm.jpeg') center/cover no-repeat fixed;
-  position:relative;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
+  position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white
 }
-.hero::before{
-  content:"";
-  position:absolute;
-  top:0;left:0;right:0;bottom:0;
-  background:rgba(0,0,0,0.42); /* slightly lighter overlay so text pops */
-}
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:90%;
-  padding:20px;
-}
-h1{font-size:clamp(2.8rem, 9vw, 4.5rem); margin:0 0 8px 0; line-height:1.1}
-h2{font-size:clamp(1.5rem, 5vw, 2.2rem); margin-bottom:15px}
-.cities{font-size:clamp(1rem, 4vw, 1.3rem); margin:20px 0; font-weight:bold; line-height:1.4}
-.cta-button{
-  display:inline-block;
-  background:#d4af37;
-  color:#1e3a8a;
-  padding:clamp(16px,5vw,22px) clamp(30px,10vw,50px);
-  font-size:clamp(1.3rem,5vw,1.7rem);
-  border-radius:12px;
-  font-weight:bold;
-  text-decoration:none;
-  margin:25px auto 0;
-}
-.trust-badges{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:25px;
-}
-.trust-badges span{
-  background:rgba(0,0,0,.7);
-  padding:10px 20px;
-  border-radius:8px;
-}
-
-/* Mobile fixes */
-@media (max-width:768px){
-  .hero{height:90vh; align-items:flex-start; padding-top:80px}
-  #cta-bar{display:block}
-}
-
-/* Rest of the sections (services, trust, etc.) */
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.42)}
+.hero-content{position:relative;z-index:2;max-width:90%;padding:20px}
+h1{font-size:clamp(2.8rem,9vw,4.5rem);margin:0 0 8px;line-height:1.1}
+h2{font-size:clamp(1.5rem,5vw,2.2rem);margin-bottom:15px}
+.cities{font-size:clamp(1rem,4vw,1.3rem);margin:20px 0;font-weight:bold;line-height:1.5}
+.cta-button{display:inline-block;background:#d4af37;color:#1e3a8a;padding:clamp(16px,5vw,22px) clamp(30px,10vw,50px);font-size:clamp(1.3rem,5vw,1.7rem);border-radius:12px;font-weight:bold;text-decoration:none}
+.trust-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:25px}
+.trust-badges span{background:rgba(0,0,0,.7);padding:10px 20px;border-radius:8px}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
-section{padding:60px 20px}
-.trust,.gallery{background:#f9f9f9}
-h2{text-align:center; margin-bottom:40px; color:#1e3a8a}
-.trust ul{list-style:none; max-width:600px; margin:0 auto; text-align:center}
-.trust li{
-  background:white;
-  padding:18px;
-  margin:12px 0;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
-  font-size:1.1em;
-}
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr);
-  gap:30px;
-  margin:40px 0;
-}
-.service-card{
-  background:white;
-  padding:35px;
-  text-align:center;
-  border-radius:14px;
-  box-shadow:0 6px 20px rgba(0,0,0,.12);
-}
-.final-cta{
-  background:#1e3a8a;
-  color:white;
-  text-align:center;
-  padding:90px 20px;
-}
-.large{
-  font-size:1.8rem;
-  padding:28px 60px;
+section{padding:70px 20px}
+.trust,.services{background:#f9f9f9;text-align:center}
+.trust ul{list-style:none;max-width:600px;margin:40px auto 0}
+.trust li{background:white;padding:18px;margin:12px 0;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:1.15em}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin:40px 0}
+.service-card{background:white;padding:40px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.12);text-align:center;font-size:1.2em}
+.final-cta{background:#1e3a8a;color:white;padding:90px 20px;text-align:center}
+.large{font-size:1.9rem;padding:30px 70px;border-radius:14px}
+@media (max-width:768px){
+  .hero{height:90vh;align-items:flex-start;padding-top:90px}
+  #cta-bar{display:block}
+  h1{margin-top:20px}
 }
