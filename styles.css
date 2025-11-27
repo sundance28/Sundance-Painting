@@ -4,7 +4,7 @@ body{font-family:Arial,sans-serif;line-height:1.6;color:#333;background:#fff;fon
 #cta-bar.show{display:block}
 #cta-bar a{color:#d4af37;text-decoration:none}
 
-.hero{background:url('https://ibb.co/Tx9wn228') center/cover no-repeat fixed;
+.hero{background:url('<a href="https://ibb.co/Tx9wn228"><img src="https://i.ibb.co/JwDcbtt7/1828712492765302069.jpg" alt="1828712492765302069" border="0" /></a>') center/cover no-repeat fixed;
   position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
 .hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.42)}
 .hero-content{position:relative;z-index:2;max-width:90%;padding:20px}
